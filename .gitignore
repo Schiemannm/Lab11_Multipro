@@ -1,0 +1,17 @@
+# Build output
+*.o
+*.d
+mandel
+mandelmovie
+
+# Generated frames and scratch movies
+mandel*.jpg
+*.mpg
+
+# Keep the final movie that goes in the repo for grading
+!mandel.mp4
+
+# Editor / OS clutter
+.vscode/
+*.swp
+.DS_Store
