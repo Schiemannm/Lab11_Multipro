@@ -4,6 +4,7 @@
 - Matthew Schiemann
 ### Date
 - 11/19/2026
+### CPE2600 121
 
 ## Overview
 - The purpose of `mandelmovie` is to generate 50 frames of a zoom into the Mandelbrot set by using multiple processes. For each frame, the parent forks a child process, which uses `execl()` to run the `./mandel` program with that frame's scale, its limit, and the output file name (`mandel%d`). The scale shrinks by a constant ratio each frame so the zoom looks smooth and not choppy.
