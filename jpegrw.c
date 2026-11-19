@@ -17,8 +17,7 @@ imgRawImage* initRawImage(unsigned int width, unsigned int height)
 // num components always 3
 imgRawImage* newImg;
 newImg = (imgRawImage*) malloc(sizeof(imgRawImage));
-newImg->lpData = (unsigned char*)malloc(sizeof(unsigned char)*(width * height
-* NUM_COMPONENTS));
+newImg->lpData = (unsigned char*)malloc(sizeof(unsigned char)*(width * height * NUM_COMPONENTS));
 newImg->numComponents = NUM_COMPONENTS;
 newImg->width = width;
 newImg->height = height;
@@ -95,13 +94,7 @@ imgWidth = info.output_width;
 imgHeight = info.output_height;
 numComponents = info.num_components;
 #ifdef DEBUG
-fprintf(
-stderr,
-"%s:%u: Reading JPEG with dimensions %lu x %lu and %u
-components\n",
-__FILE__, __LINE__,
-imgWidth, imgHeight, numComponents
-);
+fprintf( stderr, "%s:%u: Reading JPEG with dimensions %lu x %lu and %ucomponents\n", __FILE__, __LINE__, imgWidth, imgHeight, numComponents);
 #endif
 dwBufferBytes = imgWidth * imgHeight * 3; /* We only read RGB, not A */
 lpData = (unsigned char*)malloc(sizeof(unsigned char)*dwBufferBytes);
